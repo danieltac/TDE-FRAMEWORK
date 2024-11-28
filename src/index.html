@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Memória</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <link rel="stylesheet" href="output.css">
+
 </head>
-<body>
-    <h1>Jogo da Memória</h1>
-    <div class="grid" id="grid"></div>
-    <button id="restart">Reiniciar Jogo</button>
+<body class="bg-gray-100 font-sans text-center">
+    <h1 class="text-4xl font-bold text-gray-800 my-8">
+        Jogo da Memória
+    </h1>
+    <div id="grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4"></div>
+    <button id="restart" class="bg-green-500 text-white font-medium py-3 px-6 rounded-md hover:bg-green-600 active:scale-95 transition transform my-4">
+        Reiniciar Jogo
+    </button>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-bold mb-4">Parabéns!</h2>
+            <p class="mb-4">Você ganhou o jogo!</p>
+            <button id="close-modal" class="bg-green-500 text-white font-medium py-2 px-4 rounded-md hover:bg-green-600 active:scale-95 transition transform">
+                Jogar Novamente
+            </button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
 </body>
 </html>
